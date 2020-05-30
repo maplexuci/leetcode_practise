@@ -21,7 +21,7 @@ class Solution:
                     break
         return indices
 
-    def run(self):
+    def find(self):
         nums = json.loads(input('Give a list: '))
         target = int(input('Give a target number: '))
         self.twoSum(nums, target)
@@ -30,4 +30,4 @@ class Solution:
 
 
 test = Solution()
-test.run()
+test.find()
