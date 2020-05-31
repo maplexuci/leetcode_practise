@@ -14,12 +14,13 @@ class Solution:
         return nums, target
 
     def judge(self):
-        for index1 in range(len(self.nums)):
-            for index2 in range(index1+1, len(self.nums)):
-                if self.nums[index1] + self.nums[index2] == self.target:
-                    indices = [index1, index2]
-                    break
-        return indices
+        h = {}
+        for i, num in enumerate(self.nums):
+            complement = self.target - num
+            if complement not in h:
+                h[num] = i
+            else:
+                return [h[complement], i]
 
     def find(self):
         nums = json.loads(input('Give a list: '))
