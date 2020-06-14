@@ -1,6 +1,9 @@
+from typing import List
+
+
 class Solution:
 
-    def oddCells(self, n: int, m: int, indices: list) -> int:
+    def oddCells(self, n: int, m: int, indices: List[List[str]]) -> int:
         matrix = [[0]*m for x in range(n)]
         for ls in range(len(indices)):
             r = indices[ls][0]
